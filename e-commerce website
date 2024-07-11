@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyBliss</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header-icons {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        .header-icons i {
+            margin: 0 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .search-bar select,
+        .search-bar input[type="text"],
+        .search-bar button {
+            padding: 10px;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .search-bar button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .banner {
+            background-image: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .banner h2 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .banner button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f00;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #f00;
+            font-weight: bold;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f00;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BuyBliss</h1>
+        <div class="header-icons">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Gift Ideas</a></li>
+                <li><a href="#">New Releases</a></li>
+                <li><a href="#">Today's Deals</a></li>
+                <li><a href="#">Customer Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <div class="search-bar">
+        <select>
+            <option>All Category</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search this blog">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <div class="banner">
+        <h2>Get Start Your Favourite Shopping</h2>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="section-title">Men & Women Fashion</div>
+    <div class="products">
+        <div class="product">
+            <img src="C:\Users\deepi\Downloads\men cl1.jpeg" alt="Mens Kurtha"> <!-- Replace with your image -->
+            <h3>Mens kurtha</h3>
+            <p>Price $10</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\deepi\Downloads\men cl2.jpeg" alt="Mens black Shirt"> <!-- Replace with your image -->
+            <h3>Mens black Shirt</h3>
+            <p>Price $20</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\men acc1.jpeg"alt="Tie"> <!-- Replace with your image -->
+            <h3>Tie</h3>
+            <p>Price $20</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\men acc2.jpeg" alt="Shoe"> <!-- Replace with your image -->
+            <h3>Shoe</h3>
+            <p>Price $20</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\men acc3.jpeg" alt="Sneakers"> <!-- Replace with your image -->
+            <h3>Sneakers</h3>
+            <p>Price $20</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\men acc4.jpeg" alt="Watch"> <!-- Replace with your image -->
+            <h3>Watch</h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\men acc5.jpeg" alt="Chain"> <!-- Replace with your image -->
+            <h3>Chain</h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\deepi\Downloads\women cl1.jpeg" alt="Womens Scart"> <!-- Replace with your image -->
+            <h3>W Dresses</h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\women cl2.jpeg" alt="Woman Scart"> <!-- Replace with your image -->
+            <h3>Elegant black cocktail dress</h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\women cl3.jpeg" alt="Woman Scart"> <!-- Replace with your image -->
+            <h3>Berrylush Dresses </h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\women cl4.jpeg" alt="Saree"> <!-- Replace with your image -->
+            <h3>Saree</h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\women acc1.jpeg" alt="Necklace"> <!-- Replace with your image -->
+            <h3>Necklace </h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\women acc2.jpeg" alt="Handbag"> <!-- Replace with your image -->
+            <h3>Handbag</h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+<div class="product">
+            <img src="C:\Users\deepi\Downloads\women acc4.jpeg" alt="Handbag"> <!-- Replace with your image -->
+            <h3>Handbag</h3>
+            <p>Price $30</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="seeMore()">See More</button>
+        </div>
+
+    <footer>
+        <p>&copy; 2024 Eflyer. All rights reserved.</p>
+    </footer>
+
+    <script>
+function buyNow(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} added to cart!`);
+        }
+
+        function seeMore() {
+            alert(`More details about ${productName}:\n\nDescription: This is a great ${productName}.\nPrice: Check the price above.`);
+        }
+
+        function searchProducts() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const productContainer = document.getElementById('productContainer');
+            const products = productContainer.getElementsByClassName('product');
+
+            for (let i = 0; i < products.length; i++) {
+                const productName = products[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                if (productName.indexOf(input) > -1) {
+                    products[i].style.display = '';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
